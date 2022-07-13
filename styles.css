@@ -1,0 +1,514 @@
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+
+  /*===== Colors =====*/
+  --first-color: #FFFFFF;
+  --first-color-dark: #000000;
+  --first-color-darken: #A83E51;
+  --white-color: #FCF8F8;
+
+  /*===== Font and typography =====*/
+  /*--body-font: 'Inter', sans-serif;*/
+  --body-font: 'Raleway', sans-serif;
+  --big-font-size: 2.5rem;
+  --normal-font-size: .938rem;
+
+  /*===== z index =====*/
+  --z-fixed: 100;
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000000;
+  color: var(--first-color);
+  font-family: var(--body-font);
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+.header {
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.87) 40%, rgba(55, 53, 56, .35) 100%), url(https://wallpaperbat.com/img/767072-black-abstract-desktop-wallpaper.jpg);
+  /* background-size: cover; */
+  background-position: center;
+}
+
+nav {
+  margin-left: 20px;
+  margin-right: 20px;
+  /* max-width: 1024px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  height: 85px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--first-color);
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.nav-list {
+  display: flex;
+  font-weight: 200;
+}
+
+.nav-item {
+  margin-left: 3rem;
+  margin-bottom: 0;
+}
+
+.nav-item:hover {
+  background: aqua;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 400;
+}
+
+.home {
+  /* max-width: 1024px; */
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 90px;
+  height: calc(100vh - 175px)
+}
+
+.home-info {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+.home-title {
+  font-size: 50px;
+  margin: 0%;
+  font-weight: 300;
+  letter-spacing: 34px;
+  /*text-align: center;*/
+  text-indent: 34px;
+  margin-bottom: 85px;
+}
+
+.home-slogan {
+  font-weight: 200;
+  font-size: 15px;
+  letter-spacing: 10px;
+  margin-bottom: 180px;
+}
+
+.home-icon {
+  font-size: 30px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.home-icon:hover {
+  /*background: -webkit-linear-gradient(90deg, rgba(255,85,0,1) 40%, rgba(255,244,0,1) 85%);*/
+  background: aqua;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo {
+  width: 50px;
+  height: 20px;
+}
+
+
+.skills-item .skills-bar div {
+  height: 100%;
+}
+
+
+.skills-bar {
+  background-color: #111111;
+  height: 1px;
+  margin-top: 10px;
+}
+
+.skills-item {
+  margin-bottom: 14px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 3rem;
+}
+
+.tl-icon {
+  position: absolute;
+  left: -15px;
+  top: -14px;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: aqua;
+}
+
+.tl-duration {
+  padding: 0.2rem 0.6rem;
+  background-color: #222222;
+  border-radius: 15px;
+  width: fit-content;
+  font-size: .8rem;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.contact-form {
+
+  padding: 50px;
+  text-align: center;
+}
+
+.group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+input {
+  font-size: 15px;
+  letter-spacing: 5px;
+  height: 25px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 500px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #B1B1B1;
+  color: #B1B1B1;
+  background: rgba(0, 0, 0, 0);
+  opacity: 0.5;
+  transition: 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  opacity: 1;
+}
+
+label {
+  color: #B1B1B1;
+  font-size: 15px;
+  letter-spacing: 5px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 15px;
+  opacity: 0.5;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+input:focus~label,
+input:valid~label {
+  top: -10px;
+  font-size: 14px;
+  color: #B1B1B1;
+  opacity: 1;
+}
+
+textarea {
+  font-size: 15px;
+  letter-spacing: 5px;
+  width: 500px;
+  height: 150px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #B1B1B1;
+  color: #B1B1B1;
+  background: rgba(0, 0, 0, 0);
+  opacity: 0.5;
+  transition: 0.2s ease;
+}
+
+textarea:focus {
+  outline: none;
+  opacity: 1;
+}
+
+/* active state */
+textarea:focus~label,
+textarea:valid~label {
+  top: -15px;
+  font-size: 14px;
+  color: #B1B1B1;
+  opacity: 1;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  flex: initial;
+  position: relative;
+  height: 24rem;
+  width: 16rem;
+  -moz-perspective: 200rem;
+  perspective: 200rem;
+  /* margin: 2rem; */
+}
+
+.card__side {
+  /*border-radius: 150px 10px 150px 10px;*/
+  border-radius: 20px;
+  height: 100%;
+  transition: all 1s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  /* We don't want to see the back part of the element. */
+  backface-visibility: hidden;
+  /* We don't want to see the back part of the element. */
+
+  overflow: hidden;
+  /* The image is overflowing the parent. */
+  /* box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.15); */
+}
+
+.card__side--front {
+  background-image: linear-gradient(to right bottom, rgba(55, 53, 56, 0.65), rgba(2, 2, 2, 0.7)), url(https://wallpaperbat.com/img/767072-black-abstract-desktop-wallpaper.jpg);
+  /* background-image: url(https://wallpaperbat.com/img/767072-black-abstract-desktop-wallpaper.jpg); */
+  background-size: cover;
+}
+
+.card__side--back {
+  background-color: #fff;
+  transform: rotateY(180deg);
+}
+
+.card:hover .card__side--back {
+  transform: rotateY(0);
+}
+
+.card:hover .card__side--front {
+  transform: rotateY(-180deg);
+}
+
+.card__theme {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* top: 54%; */
+  width: 90%;
+  height: 100%;
+  text-align: center;
+}
+
+.card__theme-box {
+  color: #fff;
+  /* top: 51%; */
+  /* margin-bottom: 8rem;*/
+}
+
+.card__subject {
+  /* top: 10%; */
+  letter-spacing: 0.8rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  /* margin-bottom: 1rem; */
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+}
+
+.card__title {
+  text-transform: uppercase;
+  /* font-size: 3rem; */
+  font-weight: 300;
+}
+
+.card__cover {
+
+  position: relative;
+  background-size: cover;
+  height: 6rem;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  /* background-image: linear-gradient(to top right, rgba(30, 11, 54, 0.65), rgba(202, 55, 130, 0.65)), url(https://cdn.spacetelescope.org/archives/images/screen/heic0406a.jpg); */
+  /* background-image: linear-gradient(to top right, rgba(10, 9, 12, 0.65), rgb(5, 5, 5)), 
+    url(https://wallpaperbat.com/img/26418-dark-abstract-wallpaper-top-free-dark-abstract-background.jpg); */
+  /* background-image: url(https://wallpaperbat.com/img/767072-black-abstract-desktop-wallpaper.jpg); */
+  background-image: linear-gradient(to right bottom, rgba(55, 53, 56, 0.65), rgba(2, 2, 2, 0.7)), url(https://wallpaperbat.com/img/767072-black-abstract-desktop-wallpaper.jpg);
+
+}
+
+.card__heading {
+  text-align: center;
+  /* color: #fff; */
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.card__details {
+  font-weight: bold;
+  text-align: center;
+}
+
+.card__details ul {
+  list-style: none;
+  width: 100%;
+  margin: 0 auto;
+  color: #000000;
+}
+
+.card__details ul li {
+  /* text-align: center; */
+  font-size: 12px;
+  padding: 1rem;
+}
+
+.card__details ul li {
+  border-bottom: 1px solid #eee;
+}
+
+.card__details i {
+  color: black;
+  font-size: xx-large;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.section {
+  background-color: #111111;
+  align-items: center;
+  height: 100vh;
+  padding: 50px;
+  font-weight: 200;
+  font-size: 15px;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.section-container {
+  display: flex;
+  padding: 50px;
+  font-weight: 200;
+  font-size: 15px;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.contact-container {
+  width: 100%;
+  justify-content: center;
+}
+
+.side-container {
+  width: 45%;
+  /* padding: 50px; */
+  text-align: justify;
+  /* box-sizing: border-box;*/
+}
+
+.card-section {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.card-section h1 {
+  padding-bottom: 1rem;
+}
+
+.test-section{
+  display: flex;
+  padding: 100px;
+  font-weight: 200;
+  font-size: 15px;
+  justify-content: space-between;
+  background-color: #111111;
+  align-items: center;
+  height: 100vh;  
+  box-sizing: border-box;
+}
+
+.test-section h1{
+  display: block;
+}
+
+.test-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+#skills{
+  display: block;
+}
+
+.button{
+  height: 45px;
+  width: 180px;
+  background: #222222;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.buttonClass {
+  font-size:15px;
+  font-family:Arial;
+  width:140px;
+  height:50px;
+  border-width:1px;
+  color:#fff;
+  border-color:#18ab29;
+  font-weight:bold;
+  border-top-left-radius:28px;
+  border-top-right-radius:28px;
+  border-bottom-left-radius:28px;
+  border-bottom-right-radius:28px;
+  text-shadow: 1px 1px 0px #2f6627;
+  background:#44c767;
+}
+
+.buttonClass:hover {
+  background: #5cbf2a
+}
