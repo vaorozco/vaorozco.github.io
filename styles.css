@@ -163,6 +163,7 @@ ul {
 .timeline-item {
   position: relative;
   padding-left: 3rem;
+  text-align: start;
 }
 
 .tl-icon {
@@ -524,37 +525,54 @@ section>h1 {
 
 }
 
-
-@media screen and (max-width: 1024px) {
-  .home{
-    margin-top: 170px;
-  }
-
-  .section {
-    padding: 40px 80px 80px 80px;
-  }
-
-  .card{
-    flex: initial;
-    position: relative;
-    height: 22rem;
-    width: 12rem;
-    -moz-perspective: 200rem;
-    perspective: 200rem;
-  }
-
-}
-
 /* Media queries for max 768px
    If the browser window is 768px or smaller, do: */
 
    @media screen and (max-width: 768px) {
+
+    body{
+      font-size: 14px;
+    }
+
     .home{
       margin-top: 170px;
     }
+
+    .home-title{
+    font-size: 22px;
+    margin: 0%;
+    font-weight: 300;
+    letter-spacing: 16px;
+    text-indent: 16px;
+    margin-bottom: 85px;
+    }
+
+    .home-slogan{
+      font-size: 12px;
+      letter-spacing: 7px;
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
   
     .section {
-      padding: 10px 20px 20px 20px;
+      flex-direction: column;
+    padding: 20px 40px 40px 40px;
+    font-size: 13px;
+    justify-content: space-around;
+    }
+
+    .side-container{
+      width: 100% ;
+    }
+
+    section>h1 {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    
+    .side-container h1{
+      text-align: center;
+      padding-bottom: 1rem;
     }
   
     .card{
@@ -564,10 +582,6 @@ section>h1 {
       width: 12rem;
       -moz-perspective: 200rem;
       perspective: 200rem;
-    }
-
-    .skills-box{
-      display: block;
     }
   
   }
