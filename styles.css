@@ -523,3 +523,51 @@ section>h1 {
   }
 
 }
+
+
+@media screen and (max-width: 1024px) {
+  .home{
+    margin-top: 170px;
+  }
+
+  .section {
+    padding: 40px 80px 80px 80px;
+  }
+
+  .card{
+    flex: initial;
+    position: relative;
+    height: 22rem;
+    width: 12rem;
+    -moz-perspective: 200rem;
+    perspective: 200rem;
+  }
+
+}
+
+/* Media queries for max 768px
+   If the browser window is 768px or smaller, do: */
+
+   @media screen and (max-width: 768px) {
+    .home{
+      margin-top: 170px;
+    }
+  
+    .section {
+      padding: 10px 20px 20px 20px;
+    }
+  
+    .card{
+      flex: initial;
+      position: relative;
+      height: 22rem;
+      width: 12rem;
+      -moz-perspective: 200rem;
+      perspective: 200rem;
+    }
+
+    .skills-box{
+      display: block;
+    }
+  
+  }
