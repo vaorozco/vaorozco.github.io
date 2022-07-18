@@ -1,1 +1,1 @@
-alert('Welcome to my portfolio. It is constantly being updated');
+alert('Welcome to my portfolio! Responsive design in progress');
