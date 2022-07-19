@@ -484,6 +484,7 @@ section>h1 {
 
 .side-container h3 {
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .skill-container i {
@@ -556,7 +557,7 @@ section>h1 {
   
     .section {
       flex-direction: column;
-    padding: 20px 40px 40px 40px;
+    padding: 20px 15px 20px 15px;
     font-size: 13px;
     justify-content: space-around;
     }
@@ -574,14 +575,30 @@ section>h1 {
       text-align: center;
       padding-bottom: 1rem;
     }
+
+    #skills i {
+      font-size: x-large;
+      margin-right: 0.8rem;
+    }
   
+    .skill-container{
+      width: 90%;
+    }
+
     .card{
       flex: initial;
       position: relative;
-      height: 22rem;
-      width: 12rem;
+      height: 19rem;
+      width: 10rem;
       -moz-perspective: 200rem;
       perspective: 200rem;
+    }
+
+    .cards-container{
+      display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-row-gap: 2rem;
+    justify-items: center;
     }
   
   }
