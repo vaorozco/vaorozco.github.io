@@ -592,7 +592,7 @@ section>h1 {
     .card{
       flex: initial;
       position: relative;
-      height: 19rem;
+      height: 20rem;
       width: 11rem;
       -moz-perspective: 200rem;
       perspective: 200rem;
