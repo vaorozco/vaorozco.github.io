@@ -593,7 +593,7 @@ section>h1 {
       flex: initial;
       position: relative;
       height: 19rem;
-      width: 10rem;
+      width: 11rem;
       -moz-perspective: 200rem;
       perspective: 200rem;
     }
