@@ -97,20 +97,16 @@ ul {
 }
 
 .home {
-  max-width: 1024px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 90px;
-  height: calc(100vh - 175px)
+  flex-direction: column;
+    display: flex;
+    height: calc(100vh - 85px);
+    justify-content: center;
 }
 
 .home-info {
   display: flex;
   flex-direction: column;
-  width: fit-content;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
   align-items: center;
 }
 
@@ -509,38 +505,6 @@ section>h1 {
   animation: rotateAnimation 7s linear infinite;
 }
 
-@keyframes rotateAnimation {
-  from {
-    transform: rotateY(0deg);
-  }
-
-  to {
-    transform: rotateY(360deg);
-  }
-}
-
-/* Media queries for max 1024px
-   If the browser window is 1024px or smaller, do: */
-
-@media screen and (max-width: 1024px) {
-  .home {
-    margin-top: 170px;
-  }
-
-  .section {
-    padding: 40px 80px 80px 80px;
-  }
-
-  .card {
-    flex: initial;
-    position: relative;
-    height: 22rem;
-    width: 12rem;
-    -moz-perspective: 200rem;
-    perspective: 200rem;
-  }
-
-}
 
 
 .sideNav{
@@ -581,6 +545,37 @@ section>h1 {
   cursor: pointer;
 }
 
+@keyframes rotateAnimation {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+/* Media queries for max 1024px
+   If the browser window is 1024px or smaller, do: */
+
+@media screen and (max-width: 1024px) {
+
+  .section {
+    padding: 40px 80px 80px 80px;
+  }
+
+  .card {
+    flex: initial;
+    position: relative;
+    height: 22rem;
+    width: 12rem;
+    -moz-perspective: 200rem;
+    perspective: 200rem;
+  }
+
+}
+
+
 /* Media queries for max 768px
    If the browser window is 768px or smaller, do: */
 
@@ -599,11 +594,11 @@ section>h1 {
 
   nav{
     height: inherit;
-  };
+  }
 
   .home {
-    margin-top: 170px;
-    height: calc(100vh - 60px)
+    height: calc(100vh - 60px);
+    background-color: blue;
   }
 
   .home-title {
