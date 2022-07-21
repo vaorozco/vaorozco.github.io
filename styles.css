@@ -70,6 +70,11 @@ ul {
   list-style: none;
 }
 
+.menu-button{
+  display: none;
+  cursor: pointer;
+}
+
 .nav-list {
   display: flex;
   font-weight: 200;
@@ -178,6 +183,12 @@ ul {
   align-items: center;
   justify-content: center;
   color: var(--alternative-color);
+}
+
+.tl-icon i {
+  perspective: 200px;
+  transform: rotateY(180deg);
+  animation: rotateAnimation 7s linear infinite;
 }
 
 .timeline-item h5 {
@@ -460,6 +471,7 @@ textarea:valid~label {
 
 #contact {
   padding: 60px 100px 60px 100px;
+
 }
 
 .button {
@@ -507,7 +519,7 @@ section>h1 {
    If the browser window is 1024px or smaller, do: */
 
 @media screen and (max-width: 1024px) {
-  .home{
+  .home {
     margin-top: 170px;
   }
 
@@ -515,7 +527,7 @@ section>h1 {
     padding: 40px 80px 80px 80px;
   }
 
-  .card{
+  .card {
     flex: initial;
     position: relative;
     height: 22rem;
@@ -526,83 +538,165 @@ section>h1 {
 
 }
 
+
+.sideNav{
+  height: 100%;
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  background-color: #000000;
+  overflow-x: hidden;
+  transition: 0.3 ease-in;
+  padding-top: 60px;
+  display: none;
+}
+
+.sideNav a{
+  display: block;
+  font-size: 25px;
+  transition: 0.3s;
+}
+
+.sideNav a:hover{
+  color: aqua;  
+  font-weight: 300;
+}
+
+.sideNav .navitem{
+  font-size: 12px;
+  font-weight: 200;
+  margin: 2.5rem;
+}
+
+.sideNav .closeButton{
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 20px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
 /* Media queries for max 768px
    If the browser window is 768px or smaller, do: */
 
-   @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
-    body{
-      font-size: 14px;
-    }
+  body {
+    font-size: 14px;
+  }
 
-    .home{
-      margin-top: 170px;
-    }
+  .header{
+    position: fixed;
+    z-index: 1;
+    height: 45px;
+    background-image: linear-gradient(to top right, rgba(0, 0, 0, 0.87) 41%, rgba(55, 53, 56, .35) 100%), url(https://wallpaperbat.com/img/767072-black-abstract-desktop-wallpaper.jpg);
+  }
 
-    .home-title{
+  nav{
+    height: inherit;
+  };
+
+  .home {
+    margin-top: 170px;
+    height: 100vh;
+  }
+
+  .home-title {
     font-size: 22px;
     margin: 0%;
     font-weight: 300;
     letter-spacing: 16px;
     text-indent: 16px;
     margin-bottom: 85px;
-    }
+  }
 
-    .home-slogan{
-      font-size: 12px;
-      letter-spacing: 7px;
-      padding-left: 3rem;
-      padding-right: 3rem;
-    }
-  
-    .tl-icon{
-      left: -4px;
-    }
+  .home-slogan {
+    font-size: 12px;
+    letter-spacing: 7px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 
-    .section {
-      flex-direction: column;
+  .tl-icon {
+    left: -4px;
+  }
+
+  .section {
+    flex-direction: column;
     padding: 20px 15px 20px 15px;
     font-size: 13px;
     justify-content: space-around;
-    }
+  }
 
-    .side-container{
-      width: 100% ;
-    }
+  .side-container {
+    width: 100%;
+  }
 
-    section>h1 {
-      text-align: center;
-      margin-bottom: 2.5rem;
-    }
-    
-    .side-container h1{
-      text-align: center;
-      padding-bottom: 1rem;
-    }
+  section>h1 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
 
-    #skills i {
-      font-size: x-large;
-      margin-right: 0.8rem;
-    }
-  
-    .skill-container{
-      width: 90%;
-    }
+  .side-container h1 {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
 
-    .card{
-      flex: initial;
-      position: relative;
-      height: 20rem;
-      width: 11rem;
-      -moz-perspective: 200rem;
-      perspective: 200rem;
-    }
+  #skills i {
+    font-size: x-large;
+    margin-right: 0.8rem;
+  }
 
-    .cards-container{
-      display: grid;
-    grid-template-columns: repeat(2,1fr);
+  .skill-container {
+    width: 90%;
+  }
+
+  .card {
+    height: 20rem;
+    width: 11rem;
+  }
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 2rem;
     justify-items: center;
-    }
-  
   }
+
+  .card-details ul li {
+    padding: 0.6rem;
+  }
+
+  .card-subject{
+    letter-spacing: 12px;
+    font-size: 0.6rem;
+    text-indent: 12px;
+  }
+
+  .contact-form {
+    width: 90%;
+  }
+
+  #contact {
+    padding: 20px 15px 20px 15px;
+  }
+
+  input, textarea {
+    width: -webkit-fill-available;
+    font-size: 12px;
+  }
+
+  .menu-button{
+    display: flex;
+  }
+
+  .nav-list{
+    display: none;
+  }
+
+  .sideNav{
+    display: block;
+  }
+
+}

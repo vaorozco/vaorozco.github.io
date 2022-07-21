@@ -16,11 +16,12 @@
 </head>
 
 <body>
-    <!-- <header class="header" id="home">
+    <header class="header" id="home">
         <nav>
-            <span>
+            <div>
                 <img src="./images/logo.jpg" alt="" class="logo">
-            </span>
+            </div>
+            <span class="menu-button" onclick="openNav()"><i class="fa-solid fa-bars"></i></span>
             <ul class="nav-list">
                 <li class="nav-item">
                     <a href="#home">HOME</a>
@@ -39,11 +40,19 @@
                 </li>
             </ul>
         </nav>
-    </header> -->
+        <div class="sideNav" id="sideNav">
+            <a class="closeButton" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></a>
+            <a class="navitem" href="#home">HOME</a>
+            <a class="navitem" href="#about">ABOUT</a>
+            <a class="navitem" href="#skills">SKILLS</a>
+            <a class="navitem" href="#projects">PROJECTS</a>
+            <a class="navitem" href="#contact">CONTACT</a>
+        </div>
+    </header>
     <main class="home">
         <div class="home-info">
             <h1 class="home-title">VICTOR OROZCO</h1>
-            <h2 class="home-slogan">Software engineer with some experience</h2>
+            <h2 class="home-slogan">SOFTWARE ENGINEER WITH SOME EXPERIENCE</h2>
             <span class="home-icon">
                 <a href="#about"> <i class="fa-solid fa-angles-down"></i></a>
             </span>
@@ -322,7 +331,7 @@
     </section>
 
     <section class="section" style="justify-content: center; background: #222222;" id="contact">
-        <!-- <form class="contact-form" autocomplete="off">
+        <form class="contact-form" autocomplete="off">
             <h1>Contact me</h1>
             <div class="group">
                 <input id="name" type="text" required>
@@ -342,8 +351,9 @@
             </div>
 
             <button type="submit" class="button">SEND MESSAGE</button>
-        </form> -->
+        </form>
     </section>
+    <script src="/app.js"></script>
 </body>
 
 </html>
