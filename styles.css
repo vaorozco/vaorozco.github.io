@@ -51,6 +51,10 @@ body {
   background-position: center;
 }
 
+.header i{
+  font-size: x-large;
+}
+
 nav {
   margin-left: 20px;
   margin-right: 20px;
@@ -589,7 +593,7 @@ section>h1 {
   .header{
     position: fixed;
     z-index: 1;
-    height: 45px;
+    height: 60px;
     background-image: linear-gradient(to top right, rgba(0, 0, 0, 0.87) 41%, rgba(55, 53, 56, .35) 100%), url(https://wallpaperbat.com/img/767072-black-abstract-desktop-wallpaper.jpg);
   }
 
@@ -599,7 +603,7 @@ section>h1 {
 
   .home {
     margin-top: 170px;
-    height: 100vh;
+    height: calc(100vh - 60px)
   }
 
   .home-title {
@@ -632,6 +636,10 @@ section>h1 {
   .side-container {
     width: 100%;
   }
+
+  .section{
+    height: calc(100vh - 60px)
+  };
 
   section>h1 {
     text-align: center;
