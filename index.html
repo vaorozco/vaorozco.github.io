@@ -11,7 +11,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-
     <title>Víctor Alonso - Portfolio</title>
 </head>
 
@@ -42,7 +41,7 @@
         </nav>
         <div class="sideNav" id="sideNav">
             <a class="closeButton" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></a>
-            <a class="navitem" href="#home">HOME</a>
+            <a class="navitem" href="#">HOME</a>
             <a class="navitem" href="#about">ABOUT</a>
             <a class="navitem" href="#skills">SKILLS</a>
             <a class="navitem" href="#projects">PROJECTS</a>
@@ -235,8 +234,8 @@
                             <li>SQL</li>
                         </ul>
 
-                        <i class="fa-brands fa-github"></i>
-
+                        <a href="https://github.com/vaorozco/App-Web-Ingles-Fonet/tree/App" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i>
+                        </a>
                     </div>
                 </div>
 
@@ -262,7 +261,8 @@
                             <li>MySql</li>
                             <li>API</li>
                         </ul>
-                        <i class="fa-brands fa-github"></i>
+                        <a href="https://github.com/vaorozco/Employee-Manager" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i>
+                        </a>
                     </div>
                 </div>
 
@@ -288,7 +288,8 @@
                             <li>Javascript</li>
                             <li>API</li>
                         </ul>
-                        <i class="fa-brands fa-github"></i>
+                        <a href="https://github.com/vaorozco/Rick-Morty-CardsAPI" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i>
+                        </a>
                     </div>
                 </div>
 
@@ -330,9 +331,10 @@
         </div>
     </section>
 
-    <section class="section" style="justify-content: center; background: #222222;" id="contact">
-        <form class="contact-form" autocomplete="off">
+    <section class="section" style= "background: #222222;" id="contact">
+        <form class="contact-form" autocomplete="off" action="https://formsubmit.co/vaorozcocal@gmail.com" method="POST">
             <h1>Contact me</h1>
+            <input type="hidden" name="_captcha" value="false">
             <div class="group">
                 <input id="name" type="text" required>
                 <label for="name">Full Name</label>
@@ -342,16 +344,20 @@
                 <label for="email">Email</label>
             </div>
             <div class="group">
-                <input id="subject" type="text" required>
+                <input id="subject" name="_subject" type="text" required>
                 <label for="subject">Subject</label>
             </div>
             <div class="group">
                 <textarea id="message" maxlength="296" required style="resize: none;"></textarea>
                 <label for="message">Message</label>
             </div>
-
+            <input type="hidden" name="_next" value="#">
             <button type="submit" class="button">SEND MESSAGE</button>
         </form>
+        <div>
+            <a href="https://www.linkedin.com/in/vaorozco17/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/vaorozco"><i class="fa-brands fa-github"></i></a>
+        </div>
     </section>
     <script src="/app.js"></script>
 </body>
