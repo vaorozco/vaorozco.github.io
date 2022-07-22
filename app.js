@@ -10,7 +10,7 @@ function closeNav(){
 
 function submitForm() {
         
-    const form = document.querySelector('.my-form')
+    const form = document.getElementById('form')
     const formData = new FormData(form)
     const url = 'https://formsubmit.co/825c3f0ee6edf063cc01f5ea2ad854a4'
     fetch(
