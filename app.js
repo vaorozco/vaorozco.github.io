@@ -20,5 +20,7 @@ function submitForm() {
         body: formData
       }
     )
+    form.reset();
+    alert('Message sent');
     return false
 }
