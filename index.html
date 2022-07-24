@@ -18,9 +18,9 @@
     <header class="header" id="home">
         <nav>
             <div>
-                <img src="./images/logo.jpg" alt="" class="logo">
+                <img src="./images/logo.png" alt="" class="logo">
             </div>
-            <span class="menu-button" onclick="openNav()"><i class="fa-solid fa-bars"></i></span>
+            <span class="menu-button" onclick="menuButton()"><i class="fa-solid fa-bars"></i></span>
             <ul class="nav-list">
                 <li class="nav-item">
                     <a href="#home">HOME</a>
@@ -40,7 +40,8 @@
             </ul>
         </nav>
         <div class="sideNav" id="sideNav">
-            <a class="closeButton" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></a>
+            <!-- <a class="closeButton" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></a> -->
+            <a class="closeButton" onclick="menuButton()"><i class="fa-solid fa-xmark"></i></a>
             <a class="navitem" href="#">HOME</a>
             <a class="navitem" href="#about">ABOUT</a>
             <a class="navitem" href="#skills">SKILLS</a>
@@ -336,11 +337,11 @@
             <h1>Contact me</h1>
             <input type="hidden" name="_captcha" value="false">
             <div class="group">
-                <input id="name" type="text" name="name" required>
+                <input id="name" type="text" name="Name" required>
                 <label for="name">Full Name</label>
             </div>
             <div class="group">
-                <input id="email" name="email" type="email" required>
+                <input id="email" name="Email" type="email" required>
                 <label for="email">Email</label>
             </div>
             <div class="group">
@@ -348,14 +349,17 @@
                 <label for="subject">Subject</label>
             </div>
             <div class="group">
-                <textarea id="message" maxlength="296" name="message" required style="resize: none;"></textarea>
+                <textarea id="message" maxlength="296" name="Message" required style="resize: none;"></textarea>
                 <label for="message">Message</label>
             </div>
-            <button type="submit" class="button">SEND MESSAGE</button>
+            <button type="submit" class="button" on>SEND MESSAGE</button>
         </form>
-        <div>
-            <a href="https://www.linkedin.com/in/vaorozco17/"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/vaorozco"><i class="fa-brands fa-github"></i></a>
+        <div class="contact-icons">
+            <a href="https://www.linkedin.com/in/vaorozco17/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/vaorozco" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <div class="contact-message">
+            <span>Message sent. Thank you!</span>
         </div>
     </section>
     <script src="/app.js"></script>

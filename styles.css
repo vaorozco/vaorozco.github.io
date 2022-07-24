@@ -51,7 +51,7 @@ body {
   background-position: center;
 }
 
-.header i{
+.header i {
   font-size: x-large;
 }
 
@@ -74,7 +74,7 @@ ul {
   list-style: none;
 }
 
-.menu-button{
+.menu-button {
   display: none;
   cursor: pointer;
 }
@@ -98,9 +98,9 @@ ul {
 
 .home {
   flex-direction: column;
-    display: flex;
-    height: calc(100vh - 85px);
-    justify-content: center;
+  display: flex;
+  height: calc(100vh - 85px);
+  justify-content: center;
 }
 
 .home-info {
@@ -471,7 +471,8 @@ textarea:valid~label {
 
 #contact {
   padding: 60px 100px 60px 100px;
-
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .button {
@@ -507,7 +508,7 @@ section>h1 {
 
 
 
-.sideNav{
+.sideNav {
   height: 100%;
   position: fixed;
   top: 0%;
@@ -519,30 +520,74 @@ section>h1 {
   display: none;
 }
 
-.sideNav a{
+.sideNav a {
   display: block;
   font-size: 25px;
   transition: 0.3s;
 }
 
-.sideNav a:hover{
-  color: aqua;  
+.sideNav a:hover {
+  color: aqua;
   font-weight: 300;
 }
 
-.sideNav .navitem{
+.sideNav .navitem {
   font-size: 12px;
   font-weight: 200;
   margin: 2.5rem;
 }
 
-.sideNav .closeButton{
+.sideNav .closeButton {
   position: absolute;
-  top: 10px;
-  right: 25px;
-  font-size: 20px;
+  top: 14px;
+  right: 23px;
   margin-left: 50px;
   cursor: pointer;
+  font-size: x-large;
+}
+
+.contact-icons {
+  font-size: x-large;
+  cursor: pointer;
+  padding-top: 3rem;
+}
+
+.contact-message{
+  text-align: center;
+    border-radius: 20px 0px 0px 0px;
+    background: #000000;
+    top: 486.5%;
+    right: 0;
+    height: 5%;
+    /* z-index: 1; */
+    width: 230px;
+    position: absolute;
+    padding: 20px;
+    font-size: 15px;
+    font-weight: 200;
+    align-items: center;
+    /* justify-content: center; */
+    display: flex;
+    /* display: none; */
+    visibility: hidden;
+  opacity: 0;
+  
+}
+
+.show-message{
+  visibility: visible; 
+  opacity: 1;
+  max-height: 1000px;
+  transition: all 0.7s ease-out;
+  /* max-height: 0; */
+}
+
+.hide-message{
+  visibility: hidden; 
+  opacity: 0;
+  max-height: 1000px;
+  transition: all 0.7s ease-in;
+  /* max-height: 0; */
 }
 
 @keyframes rotateAnimation {
@@ -585,20 +630,19 @@ section>h1 {
     font-size: 14px;
   }
 
-  .header{
+  .header {
     position: fixed;
     z-index: 1;
     height: 60px;
     background-image: linear-gradient(to top right, rgba(0, 0, 0, 0.87) 41%, rgba(55, 53, 56, .35) 100%), url(https://wallpaperbat.com/img/767072-black-abstract-desktop-wallpaper.jpg);
   }
 
-  nav{
+  nav {
     height: inherit;
   }
 
   .home {
     height: calc(100vh - 60px);
-    background-color: blue;
   }
 
   .home-title {
@@ -632,9 +676,11 @@ section>h1 {
     width: 100%;
   }
 
-  .section{
+  .section {
     height: calc(100vh - 60px)
-  };
+  }
+
+  ;
 
   section>h1 {
     text-align: center;
@@ -671,7 +717,7 @@ section>h1 {
     padding: 0.6rem;
   }
 
-  .card-subject{
+  .card-subject {
     letter-spacing: 12px;
     font-size: 0.6rem;
     text-indent: 12px;
@@ -685,21 +731,22 @@ section>h1 {
     padding: 20px 15px 20px 15px;
   }
 
-  input, textarea {
+  input,
+  textarea {
     width: -webkit-fill-available;
     font-size: 12px;
   }
 
-  .menu-button{
+  .menu-button {
     display: flex;
   }
 
-  .nav-list{
+  .nav-list {
     display: none;
   }
 
   .sideNav{
-    display: block;
+    display: none;
   }
 
 }
