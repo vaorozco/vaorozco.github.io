@@ -1,12 +1,11 @@
 function menuButton(){
   const menu = document.getElementById("sideNav");
-  if (menu.style.display === "none") {
+   if (window.getComputedStyle(menu).display === "none") {
     menu.style.display = "block";
   } else {
     menu.style.display = "none";
   }
 }
-
 
 function submitForm() {
     const form = document.getElementById('form')
@@ -23,10 +22,6 @@ function submitForm() {
     showMessage();
     return false
 }
-
-
-// var button = document.getElementById('btn');
-// button.addEventListener("click", showMessage);
 
 function showMessage() {
   var visible = document.querySelector(".contact-message");

@@ -52,6 +52,7 @@ body {
 }
 
 .header i {
+  color: var(--alternative-color);
   font-size: x-large;
 }
 
@@ -117,6 +118,7 @@ ul {
   letter-spacing: 34px;
   text-indent: 34px;
   margin-bottom: 85px;
+  color: var(--alternative-color);
 }
 
 .home-slogan {
@@ -423,6 +425,7 @@ textarea:valid~label {
 
 .section {
   background-color: var(--second-color);
+  position: relative;
   align-items: center;
   height: 100vh;
   padding: 50px;
@@ -515,9 +518,12 @@ section>h1 {
   right: 0%;
   background-color: #000000;
   overflow-x: hidden;
-  transition: 0.3 ease-in;
+  transition: 0.3s ease-in;
   padding-top: 60px;
   display: none;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.7s ease-out;
 }
 
 .sideNav a {
@@ -552,38 +558,40 @@ section>h1 {
   padding-top: 3rem;
 }
 
-.contact-message{
+.contact-message {
   text-align: center;
     border-radius: 20px 0px 0px 0px;
     background: #000000;
-    top: 486.5%;
-    right: 0;
-    height: 5%;
-    /* z-index: 1; */
+    /* top: 486.5%; */
+    /* right: 0; */
+    height: 70px;
     width: 230px;
-    position: absolute;
+    /* position: absolute; */
     padding: 20px;
     font-size: 15px;
     font-weight: 200;
     align-items: center;
-    /* justify-content: center; */
     display: flex;
-    /* display: none; */
-    visibility: hidden;
-  opacity: 0;
-  
+    visibility: visible;
+    opacity: 1;
+    right: 0;
+    /* top: 0px; */
+    /* left: 0; */
+    bottom: 0;
+    position: absolute;
+
 }
 
-.show-message{
-  visibility: visible; 
+.show-message {
+  visibility: visible;
   opacity: 1;
   max-height: 1000px;
   transition: all 0.7s ease-out;
   /* max-height: 0; */
 }
 
-.hide-message{
-  visibility: hidden; 
+.hide-message {
+  visibility: hidden;
   opacity: 0;
   max-height: 1000px;
   transition: all 0.7s ease-in;
@@ -642,7 +650,7 @@ section>h1 {
   }
 
   .home {
-    height: calc(100vh - 60px);
+    height: 100vh;
   }
 
   .home-title {
@@ -745,8 +753,66 @@ section>h1 {
     display: none;
   }
 
-  .sideNav{
+  .sideNav {
     display: none;
   }
+
+  .contact-message {
+    height: 40px;
+    width: 100px;
+    padding: 14px;
+    font-size: 12px;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+
+  .home-info{
+    height: 100%;
+    position: relative;
+    justify-content: center;
+  }
+
+  .home-title{
+    font-size: 17px;
+    letter-spacing: 15px;
+  }
+
+  .home-slogan{
+    position: relative;
+    letter-spacing: 7px;
+    font-size: 10px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    top: 3rem;
+  }
+
+  .home-icon{
+    position: relative;
+    top: 6rem;
+  }
+
+  .card {
+    height: 18rem;
+    width: 9rem;
+}
+
+.card-subject {
+  letter-spacing: 8px;
+  text-indent: 8px;
+}
+
+.card-title {
+  font-weight: 200;
+}
+
+.card-cover{
+  height: 5rem;
+}
+
+.card-details ul li {
+  padding: 0.5rem;
+}
 
 }
