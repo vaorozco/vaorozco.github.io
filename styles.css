@@ -65,9 +65,13 @@ nav {
   height: 85px;
 }
 
-a {
+.header a {
   text-decoration: none;
-  color: var(--font-color);
+  color: var(--alternative-color);
+}
+
+a{
+  color: #FFFFFF;
 }
 
 ul {
@@ -89,13 +93,13 @@ ul {
   margin-left: 3rem;
   margin-bottom: 0;
 }
-
+/* 
 .nav-item:hover {
   background: var(--alternative-color);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 400;
-}
+} */
 
 .home {
   flex-direction: column;
@@ -112,11 +116,11 @@ ul {
 }
 
 .home-title {
-  font-size: 50px;
+  font-size: 60px;
   margin: 0%;
-  font-weight: 300;
-  letter-spacing: 34px;
-  text-indent: 34px;
+  font-weight: 100;
+  letter-spacing: 50px;
+  text-indent: 50px;
   margin-bottom: 85px;
   color: var(--alternative-color);
 }
@@ -125,7 +129,7 @@ ul {
   font-weight: 200;
   font-size: 15px;
   letter-spacing: 10px;
-  margin-bottom: 180px;
+  margin-bottom: 150px;
 }
 
 .home-icon {
@@ -361,6 +365,7 @@ textarea:valid~label {
 }
 
 .card-subject {
+  text-indent: 0.8rem;
   letter-spacing: 0.8rem;
   font-size: 1rem;
   text-transform: uppercase;
@@ -509,8 +514,6 @@ section>h1 {
   animation: rotateAnimation 7s linear infinite;
 }
 
-
-
 .sideNav {
   height: 100%;
   position: fixed;
@@ -518,13 +521,24 @@ section>h1 {
   right: 0%;
   background-color: #000000;
   overflow-x: hidden;
-  transition: 0.3s ease-in;
   padding-top: 60px;
-  display: none;
+  /* display: none; */
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+.show-sideNav {
   visibility: visible;
   opacity: 1;
-  transition: all 0.7s ease-out;
+  transition: all 0.3s ease-out;
 }
+/* 
+.hide-sideNav {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.7s ease-out; 
+} */
 
 .sideNav a {
   display: block;
@@ -556,29 +570,30 @@ section>h1 {
   font-size: x-large;
   cursor: pointer;
   padding-top: 3rem;
+  color: #FFFFFF;
 }
 
 .contact-message {
   text-align: center;
-    border-radius: 20px 0px 0px 0px;
-    background: #000000;
-    /* top: 486.5%; */
-    /* right: 0; */
-    height: 70px;
-    width: 230px;
-    /* position: absolute; */
-    padding: 20px;
-    font-size: 15px;
-    font-weight: 200;
-    align-items: center;
-    display: flex;
-    visibility: visible;
-    opacity: 1;
-    right: 0;
-    /* top: 0px; */
-    /* left: 0; */
-    bottom: 0;
-    position: absolute;
+  border-radius: 20px 0px 0px 0px;
+  background: #000000;
+  /* top: 486.5%; */
+  /* right: 0; */
+  height: 70px;
+  width: 230px;
+  /* position: absolute; */
+  padding: 20px;
+  font-size: 15px;
+  font-weight: 200;
+  align-items: center;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  right: 0;
+  /* top: 0px; */
+  /* left: 0; */
+  bottom: 0;
+  position: absolute;
 
 }
 
@@ -608,6 +623,10 @@ section>h1 {
   }
 }
 
+#short-info {
+  display: none;
+}
+
 /* Media queries for max 1024px
    If the browser window is 1024px or smaller, do: */
 
@@ -628,11 +647,34 @@ section>h1 {
 
 }
 
+@media screen and (max-width: 992px) and (orientation: portrait) {
+  .home-title{
+      letter-spacing: 25px;
+      text-indent: 25px;
+      font-size: 50px;
+  }
+
+  .home-slogan{
+    padding: 0rem 6rem;
+  }
+
+  .card{
+    width: 14rem;
+  }
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 2rem;
+    justify-items: center;
+  }
+
+}
 
 /* Media queries for max 768px
    If the browser window is 768px or smaller, do: */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
   body {
     font-size: 14px;
@@ -678,17 +720,12 @@ section>h1 {
     padding: 20px 15px 20px 15px;
     font-size: 13px;
     justify-content: space-around;
+    height: calc(100vh - 60px)
   }
 
   .side-container {
     width: 100%;
   }
-
-  .section {
-    height: calc(100vh - 60px)
-  }
-
-  ;
 
   section>h1 {
     text-align: center;
@@ -726,9 +763,9 @@ section>h1 {
   }
 
   .card-subject {
-    letter-spacing: 12px;
+    letter-spacing: 7px;
     font-size: 0.6rem;
-    text-indent: 12px;
+    text-indent: 7px;
   }
 
   .contact-form {
@@ -752,10 +789,10 @@ section>h1 {
   .nav-list {
     display: none;
   }
-
+/* 
   .sideNav {
     display: none;
-  }
+  } */
 
   .contact-message {
     height: 40px;
@@ -766,20 +803,53 @@ section>h1 {
 
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 540px) and (orientation: portrait) {
+  .home-title {
+    font-size: 25px;
+  }
 
-  .home-info{
+  .home-slogan {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  .card {
+    height: 15rem;
+    width: 10rem;
+  }
+
+  .card-cover {
+    height: 4rem;
+  }
+
+  .card-details ul li {
+    padding: 0.4rem;
+  }
+
+  .card-details i {
+    font-size: x-large;
+  }
+
+  .card-subject {
+    margin-bottom: 4rem;
+  }
+
+}
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+
+  .home-info {
     height: 100%;
     position: relative;
     justify-content: center;
   }
 
-  .home-title{
+  .home-title {
     font-size: 17px;
     letter-spacing: 15px;
   }
 
-  .home-slogan{
+  .home-slogan {
     position: relative;
     letter-spacing: 7px;
     font-size: 10px;
@@ -788,7 +858,7 @@ section>h1 {
     top: 3rem;
   }
 
-  .home-icon{
+  .home-icon {
     position: relative;
     top: 6rem;
   }
@@ -796,23 +866,177 @@ section>h1 {
   .card {
     height: 18rem;
     width: 9rem;
+  }
+
+  .card-cover {
+    height: 5rem;
+  }
+
+  .card-details ul li {
+    padding: 0.5rem;
+  }
+
 }
 
-.card-subject {
-  letter-spacing: 8px;
-  text-indent: 8px;
+@media screen and (max-width: 375px) and (orientation: portrait) {
+
+  body {
+    font-size: 12px;
+  }
+
+  .section {
+    padding: 15px 10px 15px 10px;
+    font-size: 11.5px;
+  }
+
+  .card {
+    height: 14rem;
+    width: 9rem;
+  }
+
+  .card-subject {
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+  }
+
+  .card-cover {
+    height: 3.5rem;
+  }
+
+  .card-details ul li {
+    font-size: 11px;
+    padding: 0.3rem;
+
+  }
+
+  .card-details i {
+    font-size: x-large;
+  }
+
+
+
+  .card-subject {
+    letter-spacing: 8px;
+    text-indent: 8px;
+  }
+
+  .card-title {
+    font-weight: 200;
+  }
+
+
+  h1 {
+    font-size: 1.3em;
+  }
+
+  h3 {
+    font-size: 1.10em;
+  }
+
+  .tl-duration {
+    font-size: 11.5px;
+  }
+
+  #short-info {
+    display: block;
+  }
+
+  #long-info {
+    display: none;
+  }
+
 }
 
-.card-title {
-  font-weight: 200;
+ @media screen and (max-width: 1200px) and (orientation: landscape){
+  .section{
+    padding: 60px 50px 100px;
+  }
+
 }
 
-.card-cover{
-  height: 5rem;
-}
+@media screen and (max-width: 992px) and (orientation: landscape) {
 
-.card-details ul li {
-  padding: 0.5rem;
-}
+  .section {
+    height: calc(200vh - 60px);
+    padding: 30px 60px 60px 60px;
+
+  }
+
+  .home-slogan {
+    margin-bottom: 90px;
+    font-size: 11px;
+    padding: 0rem 10rem;
+  }
+
+  .home-title {
+    margin-top: 20px;
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+
+  .card {
+    height: 17.5rem;
+    width: 13rem;
+  }
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 2rem;
+    justify-items: center;
+  }
+
+  .card-details ul li {
+    padding: 0.5rem;
+  }
+
+  .card-subject {
+    letter-spacing: 12px;
+    font-size: 0.8rem;
+    text-indent: 12px;
+    margin-bottom: 5rem;
+  }
+
+} 
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+
+  .section {
+    height: calc(200vh - 60px);
+  }
+
+  .home-slogan {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    margin-bottom: 80px;
+  }
+
+  .home-title {
+    margin-top: 100px;
+    margin-bottom: 25px;
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 25px;
+    text-indent: 25px;
+
+  }
+
+  .card {
+    height: 15rem;
+    width: 13rem;
+  }
+
+  .card-cover {
+    height: 4rem;
+  }
+
+  .card-details ul li {
+    padding: 0.4rem;
+
+  }
+
+  .card-details i {
+    font-size: x-large;
+  }
 
 }
