@@ -39,6 +39,14 @@ body {
   letter-spacing: 5px;
 }
 
+#alternative {
+  display: none;
+}
+
+.contact-icons-alternatives {
+  display: none;
+}
+
 /* Breakpoints: 480px, 768, 1024px */
 
 /* If the browser window is 600px or smaller, do: */
@@ -70,7 +78,7 @@ nav {
   color: var(--alternative-color);
 }
 
-a{
+a {
   color: #FFFFFF;
 }
 
@@ -93,6 +101,7 @@ ul {
   margin-left: 3rem;
   margin-bottom: 0;
 }
+
 /* 
 .nav-item:hover {
   background: var(--alternative-color);
@@ -522,7 +531,6 @@ section>h1 {
   background-color: #000000;
   overflow-x: hidden;
   padding-top: 60px;
-  /* display: none; */
   visibility: hidden;
   opacity: 0;
   transition: all 0.3s ease-out;
@@ -533,12 +541,6 @@ section>h1 {
   opacity: 1;
   transition: all 0.3s ease-out;
 }
-/* 
-.hide-sideNav {
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.7s ease-out; 
-} */
 
 .sideNav a {
   display: block;
@@ -632,7 +634,7 @@ section>h1 {
 
 @media screen and (max-width: 1024px) {
 
-  .home-title{
+  .home-title {
     font-weight: 200;
     font-size: 50px;
     letter-spacing: 40px;
@@ -655,17 +657,17 @@ section>h1 {
 }
 
 @media screen and (max-width: 992px) and (orientation: portrait) {
-  .home-title{
-      letter-spacing: 25px;
-      text-indent: 25px;
-      font-size: 50px;
+  .home-title {
+    letter-spacing: 25px;
+    text-indent: 25px;
+    font-size: 50px;
   }
 
-  .home-slogan{
+  .home-slogan {
     padding: 0rem 6rem;
   }
 
-  .card{
+  .card {
     width: 14rem;
   }
 
@@ -795,7 +797,8 @@ section>h1 {
   .nav-list {
     display: none;
   }
-/* 
+
+  /* 
   .sideNav {
     display: none;
   } */
@@ -853,6 +856,7 @@ section>h1 {
   .home-title {
     font-size: 17px;
     letter-spacing: 15px;
+    text-indent: 15px;
   }
 
   .home-slogan {
@@ -953,8 +957,63 @@ section>h1 {
 
 }
 
- @media screen and (max-width: 1200px) and (orientation: landscape){
-  .section{
+@media screen and (max-width: 280px) and (orientation: portrait) {
+  #contact {
+    display: none;
+  }
+
+  #projects {
+    display: none;
+  }
+
+  #skills {
+    display: none;
+  }
+
+  #about {
+    display: none;
+  }
+
+  .home-icon {
+    display: none;
+  }
+
+  #alternative {
+    display: block;
+  }
+
+  .home-title {
+    font-size: 17px;
+    letter-spacing: 8px;
+    text-indent: 8px;
+    margin-bottom: 25px;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  #main-slogan {
+    display: none;
+  }
+
+  .home-slogan {
+    margin-bottom: 100px;
+    letter-spacing: 7px;
+    font-size: 11px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .contact-icons-alternatives {
+    font-size: x-large;
+    display: block;
+  }
+
+}
+
+@media screen and (max-width: 1200px) and (orientation: landscape) {
+  .section {
     padding: 60px 50px 100px;
   }
 
@@ -1005,7 +1064,7 @@ section>h1 {
     margin-bottom: 5rem;
   }
 
-} 
+}
 
 @media screen and (max-width: 767px) and (orientation: landscape) {
 
@@ -1043,6 +1102,62 @@ section>h1 {
   }
 
   .card-details i {
+    font-size: x-large;
+  }
+
+}
+
+@media screen and (max-width: 653px) and (orientation: landscape) {
+  #contact {
+    display: none;
+  }
+
+  #projects {
+    display: none;
+  }
+
+  #skills {
+    display: none;
+  }
+
+  #about {
+    display: none;
+  }
+
+  .home-icon {
+    display: none;
+  }
+
+  #alternative {
+    display: block;
+  }
+
+  .home-title {
+    margin-top: 50px;
+    font-size: 17px;
+    letter-spacing: 8px;
+    text-indent: 8px;
+    margin-bottom: 20px;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  #main-slogan {
+    display: none;
+  }
+
+  .home-slogan {
+    margin-bottom: 15px;
+    letter-spacing: 7px;
+    font-size: 11px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .contact-icons-alternatives {
+    display: block;
     font-size: x-large;
   }
 

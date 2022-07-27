@@ -25,4 +25,5 @@ function showMessage() {
   var message = document.querySelector(".contact-message");
   message.classList.add("show-message");
   setTimeout(function () { message.classList.add("hide-message") }, 3000);
+
 }
