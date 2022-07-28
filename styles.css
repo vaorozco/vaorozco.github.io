@@ -129,8 +129,9 @@ ul {
 .home-slogan {
   font-weight: 200;
   font-size: 15px;
-  letter-spacing: 10px;
+  letter-spacing: 20px;
   margin-bottom: 150px;
+  text-indent: 20px;
 }
 
 .home-icon {
@@ -701,6 +702,7 @@ section>h1 {
     letter-spacing: 7px;
     padding-left: 3rem;
     padding-right: 3rem;
+    text-indent: 7px;
   }
 
   .tl-icon {
@@ -781,7 +783,7 @@ section>h1 {
   .nav-list {
     display: none;
   }
-  
+
   .contact-message {
     height: 40px;
     width: 100px;
@@ -845,6 +847,7 @@ section>h1 {
     padding-left: 2rem;
     padding-right: 2rem;
     top: 3rem;
+    text-indent: 7px;
   }
 
   .home-icon {
@@ -977,11 +980,11 @@ section>h1 {
   }
 
   .home-slogan {
+
     margin-bottom: 100px;
-    letter-spacing: 7px;
+    letter-spacing: 4px;
     font-size: 11px;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    text-indent: 4px;
   }
 
   .contact-icons-alternatives {
@@ -1133,6 +1136,7 @@ section>h1 {
     font-size: 11px;
     padding-left: 3rem;
     padding-right: 3rem;
+    text-indent: 7px;
   }
 
   .contact-icons-alternatives {
