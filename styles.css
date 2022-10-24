@@ -17,8 +17,6 @@
   --body-font: 'Raleway', sans-serif;
   --big-font-size: 2.5rem;
   --normal-font-size: .938rem;
-
-  /*===== z index =====*/
   --z-fixed: 100;
 }
 
@@ -46,10 +44,6 @@ body {
 .contact-icons-alternatives {
   display: none;
 }
-
-/* Breakpoints: 480px, 768, 1024px */
-
-/* If the browser window is 600px or smaller, do: */
 
 .header {
   width: 100%;
@@ -264,7 +258,6 @@ label {
   -webkit-transition: 0.2s ease all;
 }
 
-/* active state */
 input:focus~label,
 input:valid~label {
   top: -13px;
@@ -294,7 +287,6 @@ textarea:focus {
   opacity: 1;
 }
 
-/* active state */
 textarea:focus~label,
 textarea:valid~label {
   top: -13px;
@@ -326,11 +318,8 @@ textarea:valid~label {
   left: 0;
   width: 100%;
   -webkit-backface-visibility: hidden;
-  /* We don't want to see the back part of the element. */
   backface-visibility: hidden;
-  /* We don't want to see the back part of the element. */
   overflow: hidden;
-  /* The image is overflowing the parent. */
 }
 
 .card-side-front {
@@ -429,18 +418,6 @@ textarea:valid~label {
   cursor: pointer;
 }
 
-.section {
-  background-color: var(--second-color);
-  position: relative;
-  align-items: center;
-  height: 100vh;
-  padding: 50px;
-  font-weight: 200;
-  font-size: 15px;
-  display: flex;
-  box-sizing: border-box;
-}
-
 .side-container {
   width: 45%;
   text-align: justify;
@@ -448,6 +425,7 @@ textarea:valid~label {
 }
 
 .section {
+  position: relative;
   display: flex;
   padding: 60px 100px 100px 100px;
   font-weight: 200;
